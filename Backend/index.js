@@ -10,6 +10,8 @@ import applicationRoute from "./routes/application.route.js";
 import path from "path";
 
 dotenv.config({});
+// console.log("MongoDB URI:", process.env.MONGO_URI);  // Debugging line
+
 
 const app = express();
 
@@ -44,4 +46,4 @@ app.get('*', (_, res) => {
 app.listen(PORT,()=>{
     connectDB();
     console.log(`Server running  port ${PORT}`);
-})
+});
